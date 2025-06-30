@@ -133,13 +133,7 @@ export const Login: React.FC = () => {
             </button>
           </form>
 
-          {/* Demo Account */}
-          <div className="mt-6 p-4 bg-blue-900/30 border border-blue-800 rounded-lg">
-            <p className="text-blue-200 text-sm mb-2">Demo Account:</p>
-            <p className="text-blue-300 text-xs">Email: demo@cinescope.com</p>
-            <p className="text-blue-300 text-xs">Password: demo123</p>
-          </div>
-
+        
           {/* Sign up link */}
           <div className="mt-6 text-center">
             <p className="text-gray-400">
