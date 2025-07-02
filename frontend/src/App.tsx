@@ -9,7 +9,8 @@ import { Movies } from './pages/Movies';
 import { MovieDetails } from './pages/MovieDetails';
 import { Login } from './pages/Login';
 import { Register } from './pages/Register';
-import { Profile } from './pages/Profile';
+import Profile from './pages/Profile';
+
 import { Watchlist } from './pages/Watchlist';
 import { Favorites } from './pages/Favorites';
 

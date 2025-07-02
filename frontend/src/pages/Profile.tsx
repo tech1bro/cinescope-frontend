@@ -4,7 +4,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { useWatchlist } from '../contexts/WatchlistContext';
 import { Link } from 'react-router-dom';
 
-export const Profile: React.FC = () => {
+const profile: React.FC = () => {
   const { user, logout } = useAuth();
   const { watchlist, favorites } = useWatchlist();
 
@@ -35,17 +35,13 @@ export const Profile: React.FC = () => {
   return (
     <div className="min-h-screen py-8">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Profile Header */}
         <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 mb-8 border border-gray-800">
           <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
-            {/* Avatar */}
             <div className="flex-shrink-0">
               <div className="w-32 h-32 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center">
                 <User className="h-16 w-16 text-white" />
               </div>
             </div>
-
-            {/* User Info */}
             <div className="flex-1 text-center md:text-left">
               <h1 className="text-3xl font-bold text-white mb-2">{user.name}</h1>
               <p className="text-gray-400 mb-4">{user.email}</p>
@@ -70,7 +66,6 @@ export const Profile: React.FC = () => {
           </div>
         </div>
 
-        {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <div className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-gray-800 text-center">
             <Eye className="h-8 w-8 text-blue-500 mx-auto mb-2" />
@@ -95,7 +90,6 @@ export const Profile: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Recent Activity */}
           <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-800">
             <h2 className="text-2xl font-bold text-white mb-6">Recent Activity</h2>
             <div className="space-y-4">
@@ -124,7 +118,6 @@ export const Profile: React.FC = () => {
             </div>
           </div>
 
-          {/* Quick Actions */}
           <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-800">
             <h2 className="text-2xl font-bold text-white mb-6">Quick Actions</h2>
             <div className="space-y-4">
@@ -160,3 +153,5 @@ export const Profile: React.FC = () => {
     </div>
   );
 };
+
+export default profile;
