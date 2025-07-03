@@ -9,8 +9,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'), // Allows import like '@/components/Header'
     },
   },
-  server: {
-    port: 5173,
+   build: {
+    outDir: 'dist',
+    
   },
 });
 
